@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class BaseClass {
 	
@@ -86,6 +87,12 @@ public class BaseClass {
 		 ac.clickAndHold(target1).moveToElement(target2).release().perform();
 		
 	}
+	 
+	 public void selectDropDown(WebElement element , String value) {
+		 
+		 Select select = new Select(element);
+		 select.selectByVisibleText(value);
+	 }
 	 
 	 
 	 
